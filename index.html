@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deja de Quemar Tokens: Recursos | Crowned Studio</title>
+  <meta name="description" content="Los recursos del video: qué es Graphify, cómo instalarlo, y los 3 prompts listos para copiar y pegar en Claude Code.">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Deja de Quemar Tokens: Recursos | Crowned Studio">
+  <meta property="og:description" content="Graphify explicado simple, más los 3 prompts del video listos para copiar en Claude Code.">
+  <meta property="og:image" content="assets/crowned-logo-300.png">
+  <meta property="og:locale" content="es_EC">
+
+  <link rel="icon" type="image/png" href="assets/crowned-logo-88.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
+  <!-- ===== TOPBAR ===== -->
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <a href="#top" class="brand" aria-label="Crowned Studio: inicio">
+        <img src="assets/crowned-logo-88.png" alt="Crowned Studio" width="44" height="44">
+        <span class="brand-text">Crowned Studio</span>
+      </a>
+      <nav class="nav" aria-label="Navegación principal">
+        <a href="#que-resuelve">Qué es Graphify</a>
+        <a href="#pasos">Prompts</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-ghost btn-sm" href="https://instagram.com/stf_crowned" target="_blank" rel="noopener">¡Contáctame!</a>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ===== HERO ===== -->
+    <section class="hero" id="top">
+      <div class="hero-bg dot-grid" aria-hidden="true"></div>
+      <div class="wrap hero-inner">
+        <div class="hero-content">
+          <p class="eyebrow reveal">Recursos del video</p>
+
+          <h1 class="reveal">
+            Deja de quemar<br>
+            <span class="hero-line-2">
+              tokens, gana
+              <span class="hero-flip" aria-hidden="true">
+                <span style="--i:0">contexto</span>
+                <span style="--i:1">memoria</span>
+                <span style="--i:2">velocidad</span>
+                <span style="--i:3">criterio</span>
+              </span>.
+              <span class="sr-only">contexto.</span>
+            </span>
+          </h1>
+
+          <p class="hero-lede reveal">Todo lo que mostré en el video: qué es Graphify, cómo se instala, y los 3 prompts listos para copiar y pegar en Claude Code, sin escribir un comando a mano.</p>
+          <div class="hero-cta reveal">
+            <a class="btn btn-primary" href="#pasos">Ver los prompts</a>
+            <a class="btn btn-ghost" href="#que-resuelve">Qué es Graphify</a>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-hidden="true">
+          <div class="hero-circles">
+            <div class="hero-circle hero-circle-outer"></div>
+            <div class="hero-circle hero-circle-inner"></div>
+          </div>
+          <div class="hero-crown-floating">
+            <img class="hero-crown-img" src="assets/crowned-logo-300.png" alt="Crowned Studio Logo" width="280" height="280">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== MARQUEE ===== -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <span class="marquee-group">
+          <span>Menos tokens quemados</span><span class="marquee-dot">•</span>
+          <span>Contexto real del proyecto</span><span class="marquee-dot">•</span>
+          <span>Sin Git para quien no sabe Git</span><span class="marquee-dot">•</span>
+          <span>Grafo de conocimiento</span><span class="marquee-dot">•</span>
+          <span>Claude Code más rápido</span><span class="marquee-dot">•</span>
+          <span>Cero placeholders, código real</span><span class="marquee-dot">•</span>
+        </span>
+        <span class="marquee-group">
+          <span>Menos tokens quemados</span><span class="marquee-dot">•</span>
+          <span>Contexto real del proyecto</span><span class="marquee-dot">•</span>
+          <span>Sin Git para quien no sabe Git</span><span class="marquee-dot">•</span>
+          <span>Grafo de conocimiento</span><span class="marquee-dot">•</span>
+          <span>Claude Code más rápido</span><span class="marquee-dot">•</span>
+          <span>Cero placeholders, código real</span><span class="marquee-dot">•</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- ===== CONTEXTO — el problema ===== -->
+    <section class="sec" id="contexto">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>El problema: cada sesión empieza de cero</h2>
+          <hr class="title-rule">
+        </div>
+        <p class="sec-lede">Sin un mapa del proyecto, Claude Code tiene que leer archivo por archivo para entender tu codebase, y eso quema tokens y tiempo en cada pregunta. Graphify convierte tu código en un grafo de conocimiento que se consulta en vez de releerse.</p>
+        <figure class="graph-figure">
+          <img src="assets/graphify-graph.jpg" alt="Grafo de conocimiento generado por Graphify sobre un proyecto real, mostrando nodos y comunidades de archivos relacionados" width="480" loading="lazy">
+          <figcaption>Grafo real de Graphify sobre uno de nuestros proyectos. Los nodos son archivos, las conexiones son relaciones reales entre ellos.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ===== QUÉ RESUELVE — split panel ===== -->
+    <section class="sec sec-alt" id="que-resuelve">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Qué hace Graphify + tu CLAUDE.md</h2>
+          <hr class="title-rule">
+        </div>
+
+        <div class="split-panel">
+          <div class="split-text">
+            <p>Un dato importante para no vender humo: cargar tu <strong>CLAUDE.md</strong> sí entra al contexto, no es gratis. Lo que sí es real es que <strong>se carga solo, sin invocarlo</strong>, y con el caché de prompt su costo entre mensajes es casi insignificante. Muy distinto a depender de una skill externa cada vez que quieres el mismo comportamiento.</p>
+          </div>
+          <div class="split-list">
+            <div class="split-item">
+              <span class="split-n">01</span>
+              <div>
+                <h3>Se activa solo</h3>
+                <p>No hay que pegarlo ni pedirlo: vive en el CLAUDE.md del proyecto y se lee al iniciar sesión.</p>
+              </div>
+            </div>
+            <div class="split-item">
+              <span class="split-n">02</span>
+              <div>
+                <h3>El grafo reemplaza el grep</h3>
+                <p>Con Graphify, Claude consulta el grafo en vez de leer archivos crudos uno por uno.</p>
+              </div>
+            </div>
+            <div class="split-item">
+              <span class="split-n">03</span>
+              <div>
+                <h3>Sin capa extra de skill</h3>
+                <p>El protocolo de output (modo Surgeon) queda por defecto, sin invocar nada cada vez.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== PROMPTS — los 3 del video ===== -->
+    <section class="sec" id="pasos">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Los 3 prompts del video</h2>
+          <hr class="title-rule">
+        </div>
+        <p class="sec-lede">Copia y pega cada uno directo en Claude Code, parado en la raíz de tu proyecto. El primero instala Graphify. Los otros dos crean tu CLAUDE.md: elige uno según si sabes usar Git o no.</p>
+
+        <ol class="steps">
+          <li class="step">
+            <div class="step-label">
+              <span class="step-n">01</span>
+              <h3>Instalar Graphify</h3>
+            </div>
+            <div class="step-body">
+              <p>Instala <code>uv</code> si falta, instala el paquete <code>graphifyy</code> de forma aislada, instala el skill de Claude Code, genera el grafo del proyecto (código y Markdown) y deja el CLAUDE.md configurado para usarlo. Salta cualquier paso que ya esté hecho. Ojo: actualizar el grafo con archivos Markdown gasta tokens de tu plan, pero solo cuando hay cambios y solo sobre lo que cambió.</p>
+              <div class="step-practice">
+                <div class="promptbox promptbox-accent">
+                  <div class="promptbox-head">
+                    <span class="sub-label">Prompt · instalación de Graphify</span>
+                    <button class="copy-btn" type="button" data-copy-target="prompt-graphify">Copiar</button>
+                  </div>
+                  <pre><code id="prompt-graphify">Necesito que instales Graphify en este proyecto. Sigue estos pasos en orden y salta
+cualquier paso cuyo requisito ya esté cumplido — no reinstales nada que ya exista:
+
+1. Verifica si `uv` está instalado (`uv --version`). Si ya está, no lo reinstales,
+   pasa directo al punto 2. Si no está, instálalo con:
+   powershell -ExecutionPolicy ByPass -c "irm https://astral.sh/uv/install.ps1 | iex"
+
+2. Verifica si el paquete ya está instalado (`uv tool list` y busca `graphifyy`).
+   Si ya está, no lo reinstales, pasa al punto 3. Si no está, instálalo con:
+   uv tool install graphifyy
+   (el paquete real en PyPI se llama "graphifyy", con doble "y" — la herramienta
+   se llama Graphify, con una sola "y", no lo confundas al escribir el comando).
+
+3. Verifica si el skill de Claude Code ya está instalado en `~/.claude/skills/`.
+   Si ya está, no lo reinstales. Si no está, corre:
+   graphify install --platform claude
+
+4. Genera el grafo de este proyecto ejecutando la skill `/graphify .` (extracción
+   completa: incluye código y archivos Markdown/documentos) y confírmame cuántos
+   nodos y comunidades detectó. Solo si el proyecto tiene únicamente código,
+   `graphify update .` alcanza.
+
+5. Configura este proyecto para usar el grafo: agrega a mi CLAUDE.md de este
+   proyecto (créalo en la raíz si no existe) la sección
+   "KNOWLEDGE GRAPH NAVIGATION (GRAPHIFY)" con la regla de correr
+   `graphify query "&lt;pregunta&gt;"` antes de grep/lectura cruda cuando
+   `graphify-out/graph.json` exista, `graphify path "&lt;A&gt;" "&lt;B&gt;"` para relaciones,
+   `graphify explain "&lt;concepto&gt;"` para conceptos puntuales. Para mantener el grafo
+   al día: `graphify update .` solo cubre código y NO lee archivos .md; para Markdown
+   usar `/graphify . --update` (incremental, gasta tokens de tu plan). Antes de
+   consultar el grafo, comprobar si hay archivos más nuevos que
+   `graphify-out/graph.json` con:
+   find . -newer graphify-out/graph.json -type f \( -name '*.md' -o -name '*.ts' -o -name '*.js' \) -not -path './graphify-out/*' -not -path '*/node_modules/*' -not -path './.git/*' | head -1
+   y si devuelve algo, correr `/graphify . --update` primero.
+
+No toques ninguna otra dependencia de Python del sistema — todo debe quedar
+aislado vía `uv tool install`. Al terminar, dame un resumen corto de qué se
+instaló, qué ya estaba instalado y se saltó, y qué quedó configurado en este
+proyecto.</code></pre>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-label">
+              <span class="step-n">02</span>
+              <h3>CLAUDE.md: modo Surgeon con Git</h3>
+            </div>
+            <div class="step-body">
+              <p>Para quien ya usa Git. Agrega el protocolo de output Surgeon, el comando <code>/surgeon</code>, y las versiones automatizadas de <code>/save</code> (commits clasificados por tipo) y <code>/cierre</code> (registro de sesión + handoff).</p>
+              <div class="step-practice">
+                <div class="promptbox promptbox-accent">
+                  <div class="promptbox-head">
+                    <span class="sub-label">Prompt · CLAUDE.md con Git</span>
+                    <button class="copy-btn" type="button" data-copy-target="prompt-surgeon-git">Copiar</button>
+                  </div>
+                  <pre><code id="prompt-surgeon-git">Crea (o actualiza si ya existe) el CLAUDE.md de este proyecto con lo siguiente.
+Si ya hay contenido, agrega estas secciones sin borrar lo que ya está:
+
+## PROTOCOLO DE OUTPUT — modo Surgeon
+- Zero filler: sin saludos, sin "claro que sí", sin conclusiones. Directo al código.
+- Solo bloques modificados. Nunca reescribir archivos completos salvo pedido explícito.
+- Colapsar código no tocado con: // ... existing code ...
+- Máx 1–2 bullets al final del bloque — solo qué cambió.
+- Máx 5 bullets en respuestas explicativas, salvo que se pida detalle.
+- Confirmar destructivos [Y/N] antes de rm, resets de estado, builds de producción.
+- Si se pega un error: diagnosticar directo del stack trace, sin preguntar qué se hizo antes.
+- Ser directo. Cuestionar las malas ideas antes de ejecutarlas.
+- Código listo para producción — sin placeholders ni TODO.
+- Si algo no está claro, preguntar antes de asumir.
+
+## COMANDOS ACTIVOS
+
+| Comando | Efecto |
+|---|---|
+| /surgeon | Activa el protocolo de output Surgeon de arriba en cualquier punto de la sesión. |
+| /surgeon off | Desactiva el protocolo, vuelve a comportamiento normal. |
+| /save | Revisa cambios, agrupa por tipo, hace commits automáticos con nomenclatura estricta, refresca el grafo y genera el handoff. |
+| /cierre | Refresca el grafo, genera log-sesion.md con el snapshot de la sesión y genera el handoff. Se llama /cierre porque /compact ya es un comando nativo de Claude Code. |
+
+### Protocolo de Ejecución para /save
+Cuando ejecute /save (o pida un commit), debo:
+1. Correr git status y git diff para ver qué cambió.
+2. Agrupar los cambios de forma lógica — si hay diseño y lógica juntos, separar en
+   commits independientes.
+3. Clasificar de forma estricta:
+   - CSS/Tailwind/estilos sin cambiar lógica → style: ...
+   - Nuevos componentes/rutas → feat: ...
+   - Solución de bugs/errores → fix: ...
+   - Limpieza de código/refactors → refactor: ...
+   - Cambios en notas/Markdown → docs: ...
+4. Ejecutar git add y git commit -m "[tipo]: [descripción corta en minúsculas y español]".
+5. Refrescar el grafo (si el proyecto usa Graphify). Primero comprobar si hay archivos
+   nuevos desde la última actualización:
+   find . -newer graphify-out/graph.json -type f \( -name '*.md' -o -name '*.ts' -o -name '*.js' \) -not -path './graphify-out/*' -not -path '*/node_modules/*' -not -path './.git/*' | head -1
+   Si devuelve algo, correr /graphify . --update (incremental: solo re-extrae lo que
+   cambió, incluye archivos Markdown y gasta tokens de tu plan). Si no devuelve nada,
+   omitir este paso. Ojo: graphify update . solo cubre código y NO lee archivos .md.
+   (Sin el comando find, comparar la fecha de modificación de tus archivos con la de
+   graphify-out/graph.json.)
+6. Imprimir un resumen ultra corto de los commits realizados.
+7. Generar el bloque de handoff exacto:
+
+CONTINUAR:
+- Proyecto: [nombre carpeta/proyecto activo]
+- Último commit: [tipo: descripción corta]
+- SDD activo: [/sdd/{feature}/ si aplica, o "N/A"]
+- Próximo paso: [acción concreta inmediata]
+- Bloqueadores: [Ninguno / listar]
+
+Sin prosa extra en ese bloque, solo los 5 campos con valores reales. Inmediatamente
+después, en línea aparte (fuera del bloque):
+
+usa graphify para contexto — [contexto/proyecto activo]
+
+### Estructura para /cierre (log-sesion.md)
+Al ejecutar /cierre, primero refrescar el grafo (mismo chequeo del paso 5 de /save) y
+después crear log-sesion.md en la raíz con este formato exacto:
+
+# SESSION CONTEXT: [PROYECTO O HITOS DE HOY]
+**Fecha:** [AAAA-MM-DD] | **Proyecto:** [nombre]
+
+## 1. Lo que se hizo (Logros Técnicos)
+* [viñeta de lo resuelto/implementado]
+
+## 2. Estado Actual (State Snapshot)
+* **Bloqueadores:** [Ninguno / listar]
+* **Pendiente Inmediato:** [próximo paso crítico]
+
+## 3. Puntos de Conexión Semántica (Para Graphify)
+* [relaciones relevantes con otras partes del proyecto/negocio]
+
+Al terminar de escribir log-sesion.md, generar el mismo bloque de handoff CONTINUAR:
+descrito arriba (con "N/A" en Último commit si no hubo commits en la sesión), seguido
+de la línea fija "usa graphify para contexto — [contexto/proyecto activo]".
+
+No agregues nada más al CLAUDE.md fuera de estas secciones.</code></pre>
+                </div>
+              </div>
+            </div>
+          </li>
+
+          <li class="step">
+            <div class="step-label">
+              <span class="step-n">03</span>
+              <h3>CLAUDE.md: modo Surgeon SAFE, sin Git</h3>
+            </div>
+            <div class="step-body">
+              <p>Para quien no sabe programar ni usar Git. Mismo protocolo Surgeon, pero <code>/save</code> nunca toca Git: solo guarda un resumen en <code>log-sesion.md</code> y actualiza el grafo. Cero riesgo de un commit mal hecho.</p>
+              <div class="step-practice">
+                <div class="promptbox promptbox-accent">
+                  <div class="promptbox-head">
+                    <span class="sub-label">Prompt · CLAUDE.md sin Git (SAFE)</span>
+                    <button class="copy-btn" type="button" data-copy-target="prompt-surgeon-safe">Copiar</button>
+                  </div>
+                  <pre><code id="prompt-surgeon-safe">Crea (o actualiza si ya existe) el CLAUDE.md de este proyecto con lo siguiente.
+Si ya hay contenido, agrega estas secciones sin borrar lo que ya está:
+
+## PROTOCOLO DE OUTPUT — modo Surgeon
+- Zero filler: sin saludos, sin "claro que sí", sin conclusiones. Directo al código.
+- Solo bloques modificados. Nunca reescribir archivos completos salvo pedido explícito.
+- Colapsar código no tocado con: // ... existing code ...
+- Máx 1–2 bullets al final del bloque — solo qué cambió.
+- Máx 5 bullets en respuestas explicativas, salvo que se pida detalle.
+- Confirmar destructivos [Y/N] antes de rm, resets de estado, builds de producción.
+- Si se pega un error: diagnosticar directo del stack trace, sin preguntar qué se hizo antes.
+- Ser directo. Cuestionar las malas ideas antes de ejecutarlas.
+- Código listo para producción — sin placeholders ni TODO.
+- Si algo no está claro, preguntar antes de asumir.
+
+## COMANDOS ACTIVOS
+
+| Comando | Efecto |
+|---|---|
+| /surgeon | Activa el protocolo de output Surgeon de arriba en cualquier punto de la sesión. |
+| /surgeon off | Desactiva el protocolo, vuelve a comportamiento normal. |
+| /save | Guarda un registro corto de la sesión en log-sesion.md y actualiza el grafo. NO toca Git — no hace commits, no hace git add, no hace git status. |
+| /cierre | Refresca el grafo, genera log-sesion.md con el snapshot completo de la sesión y genera el handoff. Se llama /cierre porque /compact ya es un comando nativo de Claude Code. |
+
+### Protocolo de Ejecución para /save (variante sin Git)
+Cuando ejecute /save, NUNCA debo correr ningún comando de git (ni status, ni diff,
+ni add, ni commit, ni push). En su lugar debo:
+
+1. Repasar la conversación de esta sesión y resumir en 1-3 bullets ultracortos qué
+   se hizo o se resolvió (sin tecnicismos innecesarios).
+2. Agregar (append, sin borrar lo anterior) esa entrada al final de log-sesion.md
+   con este formato:
+
+   ## [AAAA-MM-DD HH:MM] — Guardado rápido
+   * [bullet 1: qué se hizo]
+   * [bullet 2: qué se hizo, si aplica]
+
+3. Refrescar el grafo (si el proyecto usa Graphify). Primero comprobar si hay archivos
+   nuevos desde la última actualización:
+   find . -newer graphify-out/graph.json -type f \( -name '*.md' -o -name '*.ts' -o -name '*.js' \) -not -path './graphify-out/*' -not -path '*/node_modules/*' -not -path './.git/*' | head -1
+   Si devuelve algo, correr /graphify . --update (incremental: solo re-extrae lo que
+   cambió, incluye archivos Markdown y gasta tokens de tu plan). Si no devuelve nada,
+   omitir este paso. Ojo: graphify update . solo cubre código y NO lee archivos .md.
+   (Sin el comando find, comparar la fecha de modificación de tus archivos con la de
+   graphify-out/graph.json.)
+4. Imprimir un resumen ultra corto de lo que se guardó.
+5. Generar el bloque de handoff exacto:
+
+CONTINUAR:
+- Proyecto: [nombre carpeta/proyecto activo]
+- Último guardado: [resumen corto de lo hecho, sacado del punto 1 — NO es un commit de Git]
+- SDD activo: [/sdd/{feature}/ si aplica, o "N/A"]
+- Próximo paso: [acción concreta inmediata]
+- Bloqueadores: [Ninguno / listar]
+
+Sin prosa extra en ese bloque, solo los 5 campos con valores reales. Inmediatamente
+después, en línea aparte (fuera del bloque):
+
+usa graphify para contexto — [contexto/proyecto activo]
+
+### Estructura para /cierre (log-sesion.md)
+Al ejecutar /cierre, primero refrescar el grafo (mismo chequeo del paso 3 de /save) y
+después crear o sobrescribir log-sesion.md en la raíz con este formato:
+
+# SESSION CONTEXT: [PROYECTO O HITOS DE HOY]
+**Fecha:** [AAAA-MM-DD] | **Proyecto:** [nombre]
+
+## 1. Lo que se hizo (Logros Técnicos)
+* [viñeta de lo resuelto/implementado]
+
+## 2. Estado Actual (State Snapshot)
+* **Bloqueadores:** [Ninguno / listar]
+* **Pendiente Inmediato:** [próximo paso crítico]
+
+## 3. Puntos de Conexión Semántica (Para Graphify)
+* [relaciones relevantes con otras partes del proyecto/negocio]
+
+Al terminar de escribir log-sesion.md, generar el mismo bloque de handoff CONTINUAR:
+descrito arriba, seguido de la línea fija
+"usa graphify para contexto — [contexto/proyecto activo]".
+
+Nunca ejecutes comandos de git en este proyecto salvo que yo lo pida explícitamente
+por fuera de /save o /cierre.
+
+No agregues nada más al CLAUDE.md fuera de estas secciones.</code></pre>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="sec sec-alt" id="faq">
+      <div class="wrap">
+        <div class="sec-head">
+          <h2>Antes de correr los prompts, esto ayuda</h2>
+          <hr class="title-rule">
+        </div>
+
+        <div class="accordion">
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="false">
+              <span>¿Cuál de los dos prompts de CLAUDE.md uso?</span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-panel">
+              <p>Si ya usas Git para tus proyectos, usa el prompt 02, que hace commits reales. Si no sabes qué es un commit o no quieres arriesgarte a tocar Git, usa el prompt 03, el SAFE, que nunca toca Git.</p>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="false">
+              <span>¿Instalar Graphify rompe mi Python?</span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-panel">
+              <p>No. Se instala con <code>uv tool install</code>, que crea un entorno aislado propio para el paquete. Nunca toca tu Python global ni las librerías de otros proyectos.</p>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="false">
+              <span>¿El paquete se llama "Graphify" o "graphifyy"?</span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-panel">
+              <p>La herramienta es Graphify, con una sola "y". El paquete real en PyPI se llama <code>graphifyy</code>, con doble "y", porque el nombre corto ya estaba tomado. Usa ese nombre exacto en el comando de instalación.</p>
+            </div>
+          </div>
+
+          <div class="acc-item">
+            <button class="acc-trigger" aria-expanded="false">
+              <span>¿Es cierto que CLAUDE.md no consume tokens?</span>
+              <span class="acc-icon" aria-hidden="true"></span>
+            </button>
+            <div class="acc-panel">
+              <p>No. Sí entra al contexto como cualquier texto de sistema. Lo real es que se carga solo, sin invocarlo, y con el caché de prompt su costo entre mensajes de la misma sesión es casi insignificante.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CTA FINAL ===== -->
+    <section class="cta-final" id="contacto">
+      <div class="dot-grid" aria-hidden="true"></div>
+      <div class="cta-bg-text" aria-hidden="true">CORONA</div>
+      <div class="wrap cta-wrap">
+        <p class="eyebrow">¿Y si vamos más allá del setup?</p>
+        <h2>¿QUIERES CORONAR TU NEGOCIO?</h2>
+        <p class="cta-italic"><em>Llevémoslo al siguiente nivel</em></p>
+        <p class="sec-lede">Agenda una reunión de 15 minutos y hablamos de tu proyecto.</p>
+        <a class="btn btn-primary btn-lg" href="https://calendly.com/stefanocoronado24/15" target="_blank" rel="noopener">Quiero coronar mi negocio</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <span>Crowned Studio © 2026 · Recursos del canal de YouTube</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
