@@ -54,3 +54,6 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!calm){
   document.addEventListener('pointerleave',()=>{root.style.removeProperty('--mx');root.style.removeProperty('--my')});
 }
 })();
+
+/* acordeón: un desplegable abierto a la vez por grupo */
+document.querySelectorAll("details").forEach(d=>d.addEventListener("toggle",()=>{if(d.open&&d.parentElement)d.parentElement.querySelectorAll(":scope>details[open]").forEach(o=>{if(o!==d)o.open=false})}));

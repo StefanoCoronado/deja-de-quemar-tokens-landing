@@ -93,3 +93,15 @@ p code,.tab-d code,.faq code{font:.86em var(--font-mono);color:var(--text-primar
   .promptbox.long{padding:52px 14px 14px}
 }
 @media(prefers-reduced-motion:reduce){.ctx[data-m=sin] .f:not(.g){animation:none}}
+
+/* indicador de desplegable */
+details>summary{display:flex;align-items:center;gap:14px}
+details>summary::before{content:"Haz clic para desplegar";order:1;margin-left:auto;font:500 .66rem var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-light);white-space:nowrap;opacity:.85}
+details[open]>summary::before{content:"Haz clic para cerrar"}
+details>summary::after{order:2}
+details>summary:hover::before{opacity:1;text-decoration:underline}
+.rung-h{position:relative}
+.rung-h::after{content:"Haz clic para desplegar";order:1;margin-left:auto;font:500 .66rem var(--font-mono);letter-spacing:.06em;text-transform:uppercase;color:var(--accent-light);white-space:nowrap}
+.rung.open .rung-h::after{content:"Haz clic para cerrar"}
+.rung-h .chev{order:2;margin-left:0}
+@media(max-width:560px){details>summary::before,.rung-h::after{font-size:.58rem;white-space:normal;text-align:right;max-width:9em}}
