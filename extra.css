@@ -163,3 +163,11 @@ details>summary:hover::before{opacity:1;text-decoration:underline}
   .cta-imm .cta-row{justify-content:flex-start}
   .cta-imm h2{max-width:16ch}
 }
+
+/* tipografía Anton: titulares como el hub de recursos */
+@font-face{font-family:'Anton';font-style:normal;font-display:swap;font-weight:400;src:url('assets/fonts/anton-latin-400-normal.woff2') format('woff2')}
+h1,h2{font-family:'Anton','Bricolage Grotesque',Impact,sans-serif;font-weight:400;text-transform:uppercase;letter-spacing:.005em;line-height:.98}
+h1{font-size:clamp(3rem,8vw,6rem)}
+h2{font-size:clamp(2.2rem,5.5vw,3.8rem)}
+.cta-imm h2{font-size:clamp(2.2rem,6vw,4.2rem);max-width:18ch}
+@media(min-width:900px){.cta-imm h2{max-width:16ch}}
