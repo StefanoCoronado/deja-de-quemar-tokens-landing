@@ -1,0 +1,19 @@
+# Deja de Quemar Tokens · Crowned Studio
+
+> Recurso en español sobre Graphify, contexto de proyectos y prompts para Claude Code.
+
+## Página principal
+
+- https://deja-de-quemar-tokens-landing.vercel.app/
+
+## Contenido de la página
+
+- Qué resuelve Graphify junto con CLAUDE.md.
+- Instalación y prompts listos para Claude Code.
+- Preguntas frecuentes sobre el flujo del recurso.
+
+## Contexto y límites
+
+- La guía se centra en Graphify y Claude Code; no es una instalación universal para todos los asistentes.
+- Comprueba los requisitos y comandos en la documentación oficial enlazada en la página antes de usarlos.
+- El contenido de este archivo facilita una orientación textual cuando un sistema decide leerlo. No es un estándar obligatorio ni garantiza rastreo, indexación, citas o recomendaciones.

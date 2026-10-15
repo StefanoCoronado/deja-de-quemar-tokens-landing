@@ -1,97 +1,56 @@
-// Crowned Studio — interacciones de landing (vanilla JS, sin dependencias)
+(()=>{
+const $=(s,r=document)=>r.querySelector(s),$$=(s,r=document)=>[...r.querySelectorAll(s)];
+const calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+const copy=async txt=>{try{await navigator.clipboard.writeText(txt)}catch{const t=document.createElement('textarea');t.value=txt;document.body.append(t);t.select();document.execCommand('copy');t.remove()}};
 
-document.addEventListener('DOMContentLoaded', () => {
-  initAccordion();
-  initScrollReveal();
-  initSmoothAnchors();
-  initCopyButtons();
-});
+/* Reveal */
+const io='IntersectionObserver'in window?new IntersectionObserver(e=>e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.12}):null;
+$$('.reveal').forEach(el=>io?io.observe(el):el.classList.add('in'));
 
-// ---- Acordeón FAQ ----
-function initAccordion(){
-  const triggers = document.querySelectorAll('.acc-trigger');
+/* Copiar prompts */
+$$('[data-copy]').forEach(b=>b.addEventListener('click',async()=>{
+  const t=document.getElementById(b.dataset.copy);if(!t)return;
+  await copy(t.textContent.trim());
+  const o=b.textContent;b.textContent='Copiado ✓';b.classList.add('done');setTimeout(()=>{b.textContent=o;b.classList.remove('done')},1600);
+}));
 
-  triggers.forEach((trigger) => {
-    const panel = trigger.nextElementSibling;
+/* Comandos */
+$$('[data-cmd]').forEach(b=>b.addEventListener('click',async()=>{
+  await copy(b.dataset.cmd);const c=$('code',b),o=c.textContent;c.textContent='Copiado ✓';b.classList.add('done');setTimeout(()=>{c.textContent=o;b.classList.remove('done')},1600);
+}));
 
-    trigger.addEventListener('click', () => {
-      const isOpen = trigger.getAttribute('aria-expanded') === 'true';
-
-      triggers.forEach((other) => {
-        if (other !== trigger){
-          other.setAttribute('aria-expanded', 'false');
-          other.nextElementSibling.style.maxHeight = null;
-        }
-      });
-
-      trigger.setAttribute('aria-expanded', String(!isOpen));
-      panel.style.maxHeight = isOpen ? null : `${panel.scrollHeight}px`;
-    });
-  });
+/* Escena con y sin Graphify */
+const cx=$('[data-ctx]');
+if(cx){
+  const bs=$$('.switch button',cx);let timer=0;
+  const set=m=>{cx.dataset.m=m;bs.forEach(b=>b.setAttribute('aria-pressed',b.dataset.m===m))};
+  bs.forEach(b=>b.addEventListener('click',()=>{clearInterval(timer);set(b.dataset.m)}));
+  if(!calm)timer=setInterval(()=>set(cx.dataset.m==='sin'?'con':'sin'),4500);
 }
 
-// ---- Fade-up al hacer scroll ----
-function initScrollReveal(){
-  const targets = document.querySelectorAll('.sec, .cta-final');
-  targets.forEach((el) => el.classList.add('fade-up'));
-
-  if (!('IntersectionObserver' in window)){
-    targets.forEach((el) => el.classList.add('in-view'));
-    return;
-  }
-
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting){
-        entry.target.classList.add('in-view');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
-
-  targets.forEach((el) => observer.observe(el));
+/* Pestañas */
+const tabs=$('[data-tabs]');
+const pick=n=>{
+  $$('[role=tab]',tabs).forEach((t,i)=>t.setAttribute('aria-selected',i===n));
+  $$('[role=tabpanel]',tabs).forEach((p,i)=>p.hidden=i!==n);
+};
+if(tabs){
+  $$('[role=tab]',tabs).forEach((t,i)=>t.addEventListener('click',()=>pick(i)));
+  /* Ayudante de Git */
+  const h=$('[data-helper]'),out=$('.helper-out',h),tl=$$('[role=tab]',tabs);
+  $$('button',h).forEach(b=>b.addEventListener('click',()=>{
+    const si=b.dataset.g==='si';
+    $$('button',h).forEach(x=>x.setAttribute('aria-pressed',x===b));
+    tl.forEach(t=>t.classList.remove('rec'));tl[0].classList.add('rec');tl[si?1:2].classList.add('rec');
+    out.innerHTML=si?'Usa el <b>01</b> y después el <b>02</b>.':'Usa el <b>01</b> y después el <b>03 (SAFE)</b>: nunca toca Git.';
+    pick(si?1:2);
+  }));
 }
 
-// ---- Copiar bloques de código ----
-function initCopyButtons(){
-  document.querySelectorAll('.copy-btn').forEach((btn) => {
-    const targetId = btn.getAttribute('data-copy-target');
-    const target = document.getElementById(targetId);
-    if (!target) return;
-
-    btn.addEventListener('click', async () => {
-      try {
-        await navigator.clipboard.writeText(target.textContent);
-      } catch (err) {
-        const range = document.createRange();
-        range.selectNode(target);
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-        document.execCommand('copy');
-        window.getSelection().removeAllRanges();
-      }
-
-      const original = btn.textContent;
-      btn.textContent = 'Copiado ✓';
-      btn.classList.add('copied');
-      setTimeout(() => {
-        btn.textContent = original;
-        btn.classList.remove('copied');
-      }, 1800);
-    });
-  });
+/* Linterna del fondo */
+if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!calm){
+  const root=document.documentElement;let raf=0,x=0,y=0;
+  addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;if(raf)return;raf=requestAnimationFrame(()=>{root.style.setProperty('--mx',x+'px');root.style.setProperty('--my',y+'px');raf=0})},{passive:true});
+  document.addEventListener('pointerleave',()=>{root.style.removeProperty('--mx');root.style.removeProperty('--my')});
 }
-
-// ---- Scroll suave para anclas internas ----
-function initSmoothAnchors(){
-  document.querySelectorAll('a[href^="#"]').forEach((link) => {
-    link.addEventListener('click', (e) => {
-      const id = link.getAttribute('href');
-      if (id.length < 2) return;
-      const target = document.querySelector(id);
-      if (!target) return;
-      e.preventDefault();
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    });
-  });
-}
+})();

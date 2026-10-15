@@ -1,0 +1,95 @@
+/* Extras de TOKENS: usa solo los tokens de styles.css */
+h1{font-size:clamp(2.6rem,6.4vw,4.8rem)}
+.hero{padding:64px 0 52px}
+.note a,.faq a{color:var(--accent-light)}
+p code,.tab-d code,.faq code{font:.86em var(--font-mono);color:var(--text-primary);background:var(--accent-dim);padding:1px 6px;border-radius:var(--radius-sm)}
+
+/* Escena del hero: con y sin Graphify */
+.ctx{background:var(--surface);border:1px solid var(--border-strong);border-radius:20px;padding:18px;box-shadow:var(--shadow-glow);display:grid;gap:14px;min-width:0}
+.ctx .switch{justify-self:start}
+.ctx-q{justify-self:end;max-width:92%;background:var(--accent);color:#fff;border-radius:14px 14px 4px 14px;padding:10px 14px;font-size:.92rem}
+.ctx-q small{display:block;font:500 .66rem var(--font-mono);text-transform:uppercase;letter-spacing:.1em;opacity:.75;margin-bottom:2px}
+.ctx-win{background:var(--surface-alt);border:1px solid var(--border);border-radius:var(--radius-lg);padding:14px;display:grid;gap:12px}
+.ctx-bar{height:14px;border-radius:99px;background:var(--bg);border:1px solid var(--border);overflow:hidden}
+.ctx-fill{display:block;height:100%;width:88%;border-radius:99px;background:linear-gradient(90deg,var(--amber),var(--bad));transition:width .9s cubic-bezier(.2,.7,.2,1),background .6s}
+.ctx[data-m=con] .ctx-fill{width:14%;background:linear-gradient(90deg,var(--ok),var(--accent-light))}
+.ctx-files{display:flex;flex-wrap:wrap;gap:6px;min-height:96px;align-content:flex-start}
+.f{font:500 .72rem var(--font-mono);padding:5px 9px;border-radius:7px;background:var(--bg);border:1px solid var(--border-strong);color:var(--text-muted);transition:opacity .5s,transform .5s,border-color .4s,color .4s}
+.ctx[data-m=sin] .f:not(.g){animation:pop .5s both}
+.ctx[data-m=sin] .f:nth-child(2){animation-delay:.08s}.ctx[data-m=sin] .f:nth-child(3){animation-delay:.16s}.ctx[data-m=sin] .f:nth-child(4){animation-delay:.24s}.ctx[data-m=sin] .f:nth-child(5){animation-delay:.32s}.ctx[data-m=sin] .f:nth-child(6){animation-delay:.4s}.ctx[data-m=sin] .f:nth-child(7){animation-delay:.48s}.ctx[data-m=sin] .f:nth-child(8){animation-delay:.56s}.ctx[data-m=sin] .f:nth-child(9){animation-delay:.64s}.ctx[data-m=sin] .f:nth-child(10){animation-delay:.72s}.ctx[data-m=sin] .f:nth-child(11){animation-delay:.8s}.ctx[data-m=sin] .f:nth-child(12){animation-delay:.88s}
+@keyframes pop{from{opacity:0;transform:translateY(8px) scale(.9)}}
+.ctx[data-m=sin] .g{display:none}
+.ctx[data-m=con] .f:not(.keep):not(.g){opacity:.1;transform:scale(.9)}
+.ctx[data-m=con] .keep{border-color:var(--ok);color:var(--ok)}
+.ctx .g{border-color:var(--accent-light);color:var(--accent-light);background:var(--accent-dim)}
+.ctx-out{display:grid;font-weight:600;font-size:.92rem;color:var(--text-primary);min-height:2.8em}
+.ctx-out span{grid-area:1/1;transition:opacity .4s}
+.ctx[data-m=sin] .o-con,.ctx[data-m=con] .o-sin{opacity:0}
+.ctx[data-m=sin] .o-sin{color:var(--bad)}.ctx[data-m=con] .o-con{color:var(--ok)}
+.ctx .legend{text-align:left}
+
+/* Figura */
+.gfig{display:grid;gap:12px;justify-items:center;text-align:center}
+.gfig img{width:100%;max-width:560px;height:auto;border-radius:var(--radius-lg);border:1px solid var(--border-strong);box-shadow:var(--shadow-glow)}
+.gfig figcaption{font-size:.85rem;color:var(--text-faint);max-width:56ch}
+
+/* Tarjetas */
+.lim{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.lim-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius-lg);padding:22px 20px;display:grid;gap:8px;align-content:start;transition:border-color .25s,transform .25s}
+.lim-card:hover{border-color:var(--accent);transform:translateY(-3px)}
+.lim-card svg{width:32px;height:32px;color:var(--accent-light)}
+.lim-card b{font:700 1.15rem var(--font-display)}.lim-card p{font-size:.9rem}
+.note{font-size:.88rem;color:var(--text-muted);border-left:2px solid var(--amber);padding-left:14px;margin-top:20px;max-width:56em}
+
+/* Ayudante Git */
+.helper{display:flex;flex-wrap:wrap;gap:14px;align-items:center;margin-bottom:22px;padding:14px 18px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface)}
+.helper-out{font-size:.9rem;color:var(--text-muted)}
+.helper-out b{color:var(--ok)}
+
+/* Pestañas de prompts */
+.tabs{display:grid;grid-template-columns:260px 1fr;gap:20px;align-items:start}
+.tab-list{display:grid;gap:8px}
+.tab-list button{display:flex;align-items:center;gap:12px;text-align:left;padding:12px 14px;border:1px solid var(--border);border-radius:var(--radius);background:var(--surface);transition:.2s}
+.tab-list button:hover,.tab-list button[aria-selected=true]{border-color:var(--accent);background:var(--accent-dim)}
+.tab-list i{font:700 .8rem var(--font-mono);width:32px;height:32px;border-radius:9px;background:var(--accent);display:grid;place-items:center;flex:none;font-style:normal;color:#fff}
+.tab-list b{display:block;font-size:.98rem}.tab-list small{display:block;color:var(--text-muted);font-size:.78rem}
+.tab-list button.rec{box-shadow:0 0 0 2px var(--ok)}
+.tab-panels{min-width:0}
+.tab-d{color:var(--text-primary);font-size:.95rem;margin-bottom:16px;max-width:64ch}
+.pb{position:relative}
+.pb .copy-btn{top:12px;right:26px;z-index:2}
+.promptbox.long{max-height:380px;overflow:auto;font-size:.76rem}
+
+/* Comandos */
+.cmds{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cmd{display:grid;gap:8px;text-align:left;padding:18px 16px;border:1px solid var(--border);border-radius:var(--radius-lg);background:var(--surface);transition:.2s}
+.cmd:hover{border-color:var(--accent);transform:translateY(-3px);box-shadow:var(--shadow-glow)}
+.cmd code{font:600 .92rem var(--font-mono);color:var(--accent-light);word-break:break-word}
+.cmd span{font-size:.84rem;color:var(--text-muted)}
+.cmd.done code{color:var(--ok)}
+
+/* FAQ */
+.faq{border-top:1px solid var(--border)}
+.faq details{border-bottom:1px solid var(--border)}
+.faq summary{cursor:pointer;list-style:none;padding:18px 0;font:600 1.02rem var(--font-display);display:flex;justify-content:space-between;gap:14px;align-items:center}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font:600 1.3rem var(--font-mono);color:var(--accent-light);transition:transform .25s}
+.faq details[open]>summary::after{transform:rotate(45deg)}
+.faq p{padding-bottom:18px;max-width:62ch}
+
+@media(max-width:860px){
+  .lim{grid-template-columns:1fr}
+  .tabs{grid-template-columns:1fr}
+  .tab-list{grid-template-columns:repeat(3,1fr)}
+  .tab-list small{display:none}
+  .cmds{grid-template-columns:1fr 1fr}
+}
+@media(max-width:560px){
+  .tab-list{grid-template-columns:1fr}
+  .tab-list small{display:block}
+  .cmds{grid-template-columns:1fr}
+  .hero-cta .btn{width:100%}
+  .pb .copy-btn{right:18px}
+  .promptbox.long{padding:52px 14px 14px}
+}
+@media(prefers-reduced-motion:reduce){.ctx[data-m=sin] .f:not(.g){animation:none}}

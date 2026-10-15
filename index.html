@@ -1,187 +1,98 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Deja de Quemar Tokens: Recursos | Crowned Studio</title>
-  <meta name="description" content="Los recursos del video: qué es Graphify, cómo instalarlo, y los 3 prompts listos para copiar y pegar en Claude Code.">
-
-  <!-- Open Graph -->
-  <meta property="og:type" content="website">
-  <meta property="og:title" content="Deja de Quemar Tokens: Recursos | Crowned Studio">
-  <meta property="og:description" content="Graphify explicado simple, más los 3 prompts del video listos para copiar en Claude Code.">
-  <meta property="og:image" content="assets/crowned-logo-300.png">
-  <meta property="og:locale" content="es_EC">
-
-  <link rel="icon" type="image/png" href="assets/crowned-logo-88.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Hanken+Grotesk:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-
-  <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Deja de Quemar Tokens: Graphify y Claude Code | Crowned Studio</title>
+<meta name="description" content="Qué es Graphify, cómo instalarlo y los 3 prompts listos para copiar en Claude Code: instalar el grafo y dejar tu CLAUDE.md configurado, con Git o sin Git.">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<link rel="canonical" href="https://deja-de-quemar-tokens-landing.vercel.app/">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Deja de Quemar Tokens: Graphify y Claude Code | Crowned Studio">
+<meta property="og:description" content="Graphify explicado simple y los 3 prompts del video listos para copiar en Claude Code.">
+<meta property="og:url" content="https://deja-de-quemar-tokens-landing.vercel.app/">
+<meta property="og:image" content="https://deja-de-quemar-tokens-landing.vercel.app/assets/crowned-logo-88.png">
+<meta property="og:image:alt" content="Logotipo de Crowned Studio">
+<meta property="og:locale" content="es_EC">
+<meta name="twitter:card" content="summary">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"TechArticle","headline":"Deja de Quemar Tokens: recursos de Graphify y Claude Code","description":"Guía en español con una explicación de Graphify, instrucciones de instalación y prompts para Claude Code.","inLanguage":"es-EC","mainEntityOfPage":{"@type":"WebPage","@id":"https://deja-de-quemar-tokens-landing.vercel.app/"},"author":{"@type":"Person","name":"Stéfano Coronado"},"publisher":{"@type":"Organization","name":"Crowned Studio"}}</script>
+<link rel="icon" type="image/png" href="assets/crowned-logo-88.png">
+<link rel="preload" href="assets/fonts/bricolage-grotesque-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="extra.css">
 </head>
 <body>
+<a class="skip-link" href="#main">Saltar al contenido</a>
+<header class="topbar"><div class="wrap topbar-inner">
+  <a href="#top" class="brand" aria-label="Crowned Studio: inicio"><img src="assets/crowned-logo-88.png" alt="" width="34" height="34"><span>Crowned Studio</span></a>
+  <nav class="nav" aria-label="Secciones"><a href="#que-hace">Qué hace</a><a href="#prompts">Prompts</a><a href="#usar">Cómo se usa</a><a href="#faq">Dudas</a></nav>
+  <a class="btn btn-ghost btn-sm" href="https://instagram.com/stefano.coronadoo" target="_blank" rel="noopener">Contáctame</a>
+</div></header>
 
-  <a class="skip-link" href="#main">Saltar al contenido</a>
-
-  <!-- ===== TOPBAR ===== -->
-  <header class="topbar">
-    <div class="wrap topbar-inner">
-      <a href="#top" class="brand" aria-label="Crowned Studio: inicio">
-        <img src="assets/crowned-logo-88.png" alt="Crowned Studio" width="44" height="44">
-        <span class="brand-text">Crowned Studio</span>
-      </a>
-      <nav class="nav" aria-label="Navegación principal">
-        <a href="#que-resuelve">Qué es Graphify</a>
-        <a href="#pasos">Prompts</a>
-        <a href="#faq">FAQ</a>
-      </nav>
-      <a class="btn btn-ghost btn-sm" href="https://instagram.com/stf_crowned" target="_blank" rel="noopener">¡Contáctame!</a>
+<main id="main">
+<section class="hero" id="top">
+  <div class="hero-bg dot-grid"></div>
+  <div class="hero-crown" aria-hidden="true"><i class="halo"></i><img src="assets/crowned-logo-88.png" alt="" width="48" height="48"></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Recursos del video</span>
+      <h1>Deja de quemar <em>tokens</em></h1>
+      <p class="lede">Claude Code no tiene que leer todo tu proyecto cada vez. Con Graphify consulta un mapa. Aquí están los 3 prompts del video, listos para copiar.</p>
+      <div class="hero-cta"><a class="btn btn-primary btn-lg" href="#prompts">Copiar los prompts</a><a class="btn btn-ghost btn-lg" href="#que-hace">Qué es Graphify</a></div>
     </div>
-  </header>
-
-  <main id="main">
-
-    <!-- ===== HERO ===== -->
-    <section class="hero" id="top">
-      <div class="hero-bg dot-grid" aria-hidden="true"></div>
-      <div class="wrap hero-inner">
-        <div class="hero-content">
-          <p class="eyebrow reveal">Recursos del video</p>
-
-          <h1 class="reveal">
-            Deja de quemar<br>
-            <span class="hero-line-2">
-              tokens, gana
-              <span class="hero-flip" aria-hidden="true">
-                <span style="--i:0">contexto</span>
-                <span style="--i:1">memoria</span>
-                <span style="--i:2">velocidad</span>
-                <span style="--i:3">criterio</span>
-              </span>.
-              <span class="sr-only">contexto.</span>
-            </span>
-          </h1>
-
-          <p class="hero-lede reveal">Todo lo que mostré en el video: qué es Graphify, cómo se instala, y los 3 prompts listos para copiar y pegar en Claude Code, sin escribir un comando a mano.</p>
-          <div class="hero-cta reveal">
-            <a class="btn btn-primary" href="#pasos">Ver los prompts</a>
-            <a class="btn btn-ghost" href="#que-resuelve">Qué es Graphify</a>
-          </div>
-        </div>
-
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="hero-circles">
-            <div class="hero-circle hero-circle-outer"></div>
-            <div class="hero-circle hero-circle-inner"></div>
-          </div>
-          <div class="hero-crown-floating">
-            <img class="hero-crown-img" src="assets/crowned-logo-300.png" alt="Crowned Studio Logo" width="280" height="280">
-          </div>
+    <div class="ctx" data-ctx data-m="sin" role="group" aria-label="Ilustración: cómo Claude Code busca en tu proyecto con y sin Graphify">
+      <div class="switch" role="group" aria-label="Modo"><button type="button" data-m="sin" aria-pressed="true">Sin Graphify</button><button type="button" data-m="con" aria-pressed="false">Con Graphify</button></div>
+      <div class="ctx-q"><small>Tú</small>¿Dónde se maneja el login?</div>
+      <div class="ctx-win" aria-hidden="true">
+        <div class="ctx-bar"><i class="ctx-fill"></i></div>
+        <div class="ctx-files">
+          <span class="f">auth.ts</span><span class="f keep">login.tsx</span><span class="f">api.ts</span><span class="f">header.tsx</span><span class="f">utils.ts</span><span class="f">db.ts</span><span class="f">footer.tsx</span><span class="f">hero.tsx</span><span class="f">routes.ts</span><span class="f">theme.css</span><span class="f">cart.ts</span><span class="f">seo.ts</span>
+          <span class="f g">graph.json</span>
         </div>
       </div>
-    </section>
-
-    <!-- ===== MARQUEE ===== -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span class="marquee-group">
-          <span>Menos tokens quemados</span><span class="marquee-dot">•</span>
-          <span>Contexto real del proyecto</span><span class="marquee-dot">•</span>
-          <span>Sin Git para quien no sabe Git</span><span class="marquee-dot">•</span>
-          <span>Grafo de conocimiento</span><span class="marquee-dot">•</span>
-          <span>Claude Code más rápido</span><span class="marquee-dot">•</span>
-          <span>Cero placeholders, código real</span><span class="marquee-dot">•</span>
-        </span>
-        <span class="marquee-group">
-          <span>Menos tokens quemados</span><span class="marquee-dot">•</span>
-          <span>Contexto real del proyecto</span><span class="marquee-dot">•</span>
-          <span>Sin Git para quien no sabe Git</span><span class="marquee-dot">•</span>
-          <span>Grafo de conocimiento</span><span class="marquee-dot">•</span>
-          <span>Claude Code más rápido</span><span class="marquee-dot">•</span>
-          <span>Cero placeholders, código real</span><span class="marquee-dot">•</span>
-        </span>
-      </div>
+      <p class="ctx-out" aria-live="polite"><span class="o-sin">Abre archivo por archivo hasta encontrarlo. Mucho contexto gastado.</span><span class="o-con">Consulta el mapa y abre solo <b>login.tsx</b>. Poco contexto gastado.</span></p>
+      <p class="legend">Ilustración del concepto, no una medición</p>
     </div>
+  </div>
+</section>
 
-    <!-- ===== CONTEXTO — el problema ===== -->
-    <section class="sec" id="contexto">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>El problema: cada sesión empieza de cero</h2>
-          <hr class="title-rule">
-        </div>
-        <p class="sec-lede">Sin un mapa del proyecto, Claude Code tiene que leer archivo por archivo para entender tu codebase, y eso quema tokens y tiempo en cada pregunta. Graphify convierte tu código en un grafo de conocimiento que se consulta en vez de releerse.</p>
-        <figure class="graph-figure">
-          <img src="assets/graphify-graph.jpg" alt="Grafo de conocimiento generado por Graphify sobre un proyecto real, mostrando nodos y comunidades de archivos relacionados" width="480" loading="lazy">
-          <figcaption>Grafo real de Graphify sobre uno de nuestros proyectos. Los nodos son archivos, las conexiones son relaciones reales entre ellos.</figcaption>
-        </figure>
+<section id="problema">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Cada sesión empieza <em>de cero</em></h2><p>Sin un mapa, Claude Code lee archivo por archivo para entender tu proyecto. Eso gasta tokens y tiempo en cada pregunta.</p><div class="title-rule"></div></div>
+    <figure class="gfig reveal"><img src="assets/graphify-graph.jpg" alt="Grafo de conocimiento generado por Graphify sobre un proyecto real, con nodos y comunidades de archivos relacionados" width="480" loading="lazy"><figcaption>Grafo real de Graphify sobre uno de nuestros proyectos. Los nodos son archivos y las conexiones son relaciones reales entre ellos.</figcaption></figure>
+  </div>
+</section>
+
+<section id="que-hace">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Graphify + tu <em>CLAUDE.md</em></h2><p>Dos piezas que trabajan juntas.</p><div class="title-rule"></div></div>
+    <div class="lim reveal">
+      <div class="lim-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M13 3 5 14h6l-1 7 8-11h-6z"/></svg><b>Se activa solo</b><p>Vive en el CLAUDE.md del proyecto y se lee al iniciar sesión. No hay que pegarlo.</p></div>
+      <div class="lim-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="6" cy="6" r="2.5"/><circle cx="18" cy="8" r="2.5"/><circle cx="12" cy="18" r="2.5"/><path d="M8 7l8 1M7 8l4 8M17 10l-4 6"/></svg><b>El grafo reemplaza el grep</b><p>Claude consulta el grafo en vez de leer archivos crudos uno por uno.</p></div>
+      <div class="lim-card"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 7h16M4 12h10M4 17h6"/></svg><b>Sin capa extra de skill</b><p>El protocolo de output (modo Surgeon) queda por defecto, sin invocar nada cada vez.</p></div>
+    </div>
+    <p class="note reveal">Para no vender humo: el CLAUDE.md sí entra al contexto, no es gratis. Lo real es que se carga solo y, con el caché de prompt, su costo entre mensajes es casi insignificante.</p>
+  </div>
+</section>
+
+<section id="prompts">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Los 3 prompts del <em>video</em></h2><p>Copia uno y pégalo en Claude Code, parado en la raíz de tu proyecto. El 01 instala Graphify. El 02 o el 03 crean tu CLAUDE.md.</p><div class="title-rule"></div></div>
+    <div class="helper reveal" data-helper>
+      <b>¿Sabes usar Git?</b>
+      <div class="switch" role="group" aria-label="Uso de Git"><button type="button" data-g="si" aria-pressed="false">Sí</button><button type="button" data-g="no" aria-pressed="false">No o no estoy seguro</button></div>
+      <span class="helper-out" aria-live="polite">Elige y te digo qué prompt usar después del 01.</span>
+    </div>
+    <div class="tabs reveal" data-tabs>
+      <div class="tab-list" role="tablist" aria-label="Prompts">
+        <button type="button" role="tab" id="t1" aria-selected="true" aria-controls="pn1"><i>01</i><span><b>Instalar Graphify</b><small>Primero, para todos</small></span></button>
+        <button type="button" role="tab" id="t2" aria-selected="false" aria-controls="pn2"><i>02</i><span><b>CLAUDE.md con Git</b><small>Para quien ya usa Git</small></span></button>
+        <button type="button" role="tab" id="t3" aria-selected="false" aria-controls="pn3"><i>03</i><span><b>CLAUDE.md SAFE</b><small>Sin tocar Git</small></span></button>
       </div>
-    </section>
-
-    <!-- ===== QUÉ RESUELVE — split panel ===== -->
-    <section class="sec sec-alt" id="que-resuelve">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>Qué hace Graphify + tu CLAUDE.md</h2>
-          <hr class="title-rule">
-        </div>
-
-        <div class="split-panel">
-          <div class="split-text">
-            <p>Un dato importante para no vender humo: cargar tu <strong>CLAUDE.md</strong> sí entra al contexto, no es gratis. Lo que sí es real es que <strong>se carga solo, sin invocarlo</strong>, y con el caché de prompt su costo entre mensajes es casi insignificante. Muy distinto a depender de una skill externa cada vez que quieres el mismo comportamiento.</p>
-          </div>
-          <div class="split-list">
-            <div class="split-item">
-              <span class="split-n">01</span>
-              <div>
-                <h3>Se activa solo</h3>
-                <p>No hay que pegarlo ni pedirlo: vive en el CLAUDE.md del proyecto y se lee al iniciar sesión.</p>
-              </div>
-            </div>
-            <div class="split-item">
-              <span class="split-n">02</span>
-              <div>
-                <h3>El grafo reemplaza el grep</h3>
-                <p>Con Graphify, Claude consulta el grafo en vez de leer archivos crudos uno por uno.</p>
-              </div>
-            </div>
-            <div class="split-item">
-              <span class="split-n">03</span>
-              <div>
-                <h3>Sin capa extra de skill</h3>
-                <p>El protocolo de output (modo Surgeon) queda por defecto, sin invocar nada cada vez.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ===== PROMPTS — los 3 del video ===== -->
-    <section class="sec" id="pasos">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>Los 3 prompts del video</h2>
-          <hr class="title-rule">
-        </div>
-        <p class="sec-lede">Copia y pega cada uno directo en Claude Code, parado en la raíz de tu proyecto. El primero instala Graphify. Los otros dos crean tu CLAUDE.md: elige uno según si sabes usar Git o no.</p>
-
-        <ol class="steps">
-          <li class="step">
-            <div class="step-label">
-              <span class="step-n">01</span>
-              <h3>Instalar Graphify</h3>
-            </div>
-            <div class="step-body">
-              <p>Instala <code>uv</code> si falta, instala el paquete <code>graphifyy</code> de forma aislada, instala el skill de Claude Code, genera el grafo del proyecto (código y Markdown) y deja el CLAUDE.md configurado para usarlo. Salta cualquier paso que ya esté hecho. Ojo: actualizar el grafo con archivos Markdown gasta tokens de tu plan, pero solo cuando hay cambios y solo sobre lo que cambió.</p>
-              <div class="step-practice">
-                <div class="promptbox promptbox-accent">
-                  <div class="promptbox-head">
-                    <span class="sub-label">Prompt · instalación de Graphify</span>
-                    <button class="copy-btn" type="button" data-copy-target="prompt-graphify">Copiar</button>
-                  </div>
-                  <pre><code id="prompt-graphify">Necesito que instales Graphify en este proyecto. Sigue estos pasos en orden y salta
+      <div class="panel panel-glow tab-panels">
+        <div role="tabpanel" id="pn1" aria-labelledby="t1">
+          <p class="tab-d">Instala <code>uv</code> si falta, instala el paquete <code>graphifyy</code> de forma aislada, instala el skill de Claude Code, genera el grafo del proyecto (código y Markdown) y deja el CLAUDE.md configurado para usarlo. Salta cualquier paso que ya esté hecho. Ojo: actualizar el grafo con archivos Markdown gasta tokens de tu plan, pero solo cuando hay cambios y solo sobre lo que cambió.</p>
+          <div class="pb"><button type="button" class="copy-btn" data-copy="prompt-graphify">Copiar</button><pre class="promptbox long" id="prompt-graphify">Necesito que instales Graphify en este proyecto. Sigue estos pasos en orden y salta
 cualquier paso cuyo requisito ya esté cumplido — no reinstales nada que ya exista:
 
 1. Verifica si `uv` está instalado (`uv --version`). Si ya está, no lo reinstales,
@@ -219,26 +130,11 @@ cualquier paso cuyo requisito ya esté cumplido — no reinstales nada que ya ex
 No toques ninguna otra dependencia de Python del sistema — todo debe quedar
 aislado vía `uv tool install`. Al terminar, dame un resumen corto de qué se
 instaló, qué ya estaba instalado y se saltó, y qué quedó configurado en este
-proyecto.</code></pre>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="step">
-            <div class="step-label">
-              <span class="step-n">02</span>
-              <h3>CLAUDE.md: modo Surgeon con Git</h3>
-            </div>
-            <div class="step-body">
-              <p>Para quien ya usa Git. Agrega el protocolo de output Surgeon, el comando <code>/surgeon</code>, y las versiones automatizadas de <code>/save</code> (commits clasificados por tipo) y <code>/cierre</code> (registro de sesión + handoff).</p>
-              <div class="step-practice">
-                <div class="promptbox promptbox-accent">
-                  <div class="promptbox-head">
-                    <span class="sub-label">Prompt · CLAUDE.md con Git</span>
-                    <button class="copy-btn" type="button" data-copy-target="prompt-surgeon-git">Copiar</button>
-                  </div>
-                  <pre><code id="prompt-surgeon-git">Crea (o actualiza si ya existe) el CLAUDE.md de este proyecto con lo siguiente.
+proyecto.</pre></div>
+        </div>
+        <div role="tabpanel" id="pn2" aria-labelledby="t2" hidden>
+          <p class="tab-d">Para quien ya usa Git. Agrega el protocolo de output Surgeon, el comando <code>/surgeon</code> y las versiones automatizadas de <code>/save</code> (commits clasificados por tipo) y <code>/cierre</code> (registro de sesión y handoff).</p>
+          <div class="pb"><button type="button" class="copy-btn" data-copy="prompt-surgeon-git">Copiar</button><pre class="promptbox long" id="prompt-surgeon-git">Crea (o actualiza si ya existe) el CLAUDE.md de este proyecto con lo siguiente.
 Si ya hay contenido, agrega estas secciones sin borrar lo que ya está:
 
 ## PROTOCOLO DE OUTPUT — modo Surgeon
@@ -318,26 +214,11 @@ Al terminar de escribir log-sesion.md, generar el mismo bloque de handoff CONTIN
 descrito arriba (con "N/A" en Último commit si no hubo commits en la sesión), seguido
 de la línea fija "usa graphify para contexto — [contexto/proyecto activo]".
 
-No agregues nada más al CLAUDE.md fuera de estas secciones.</code></pre>
-                </div>
-              </div>
-            </div>
-          </li>
-
-          <li class="step">
-            <div class="step-label">
-              <span class="step-n">03</span>
-              <h3>CLAUDE.md: modo Surgeon SAFE, sin Git</h3>
-            </div>
-            <div class="step-body">
-              <p>Para quien no sabe programar ni usar Git. Mismo protocolo Surgeon, pero <code>/save</code> nunca toca Git: solo guarda un resumen en <code>log-sesion.md</code> y actualiza el grafo. Cero riesgo de un commit mal hecho.</p>
-              <div class="step-practice">
-                <div class="promptbox promptbox-accent">
-                  <div class="promptbox-head">
-                    <span class="sub-label">Prompt · CLAUDE.md sin Git (SAFE)</span>
-                    <button class="copy-btn" type="button" data-copy-target="prompt-surgeon-safe">Copiar</button>
-                  </div>
-                  <pre><code id="prompt-surgeon-safe">Crea (o actualiza si ya existe) el CLAUDE.md de este proyecto con lo siguiente.
+No agregues nada más al CLAUDE.md fuera de estas secciones.</pre></div>
+        </div>
+        <div role="tabpanel" id="pn3" aria-labelledby="t3" hidden>
+          <p class="tab-d">Para quien no sabe programar ni usar Git. Mismo protocolo Surgeon, pero <code>/save</code> nunca toca Git: solo guarda un resumen en <code>log-sesion.md</code> y actualiza el grafo. Cero riesgo de un commit mal hecho.</p>
+          <div class="pb"><button type="button" class="copy-btn" data-copy="prompt-surgeon-safe">Copiar</button><pre class="promptbox long" id="prompt-surgeon-safe">Crea (o actualiza si ya existe) el CLAUDE.md de este proyecto con lo siguiente.
 Si ya hay contenido, agrega estas secciones sin borrar lo que ya está:
 
 ## PROTOCOLO DE OUTPUT — modo Surgeon
@@ -421,89 +302,48 @@ descrito arriba, seguido de la línea fija
 Nunca ejecutes comandos de git en este proyecto salvo que yo lo pida explícitamente
 por fuera de /save o /cierre.
 
-No agregues nada más al CLAUDE.md fuera de estas secciones.</code></pre>
-                </div>
-              </div>
-            </div>
-          </li>
-        </ol>
-      </div>
-    </section>
-
-    <!-- ===== FAQ ===== -->
-    <section class="sec sec-alt" id="faq">
-      <div class="wrap">
-        <div class="sec-head">
-          <h2>Antes de correr los prompts, esto ayuda</h2>
-          <hr class="title-rule">
-        </div>
-
-        <div class="accordion">
-          <div class="acc-item">
-            <button class="acc-trigger" aria-expanded="false">
-              <span>¿Cuál de los dos prompts de CLAUDE.md uso?</span>
-              <span class="acc-icon" aria-hidden="true"></span>
-            </button>
-            <div class="acc-panel">
-              <p>Si ya usas Git para tus proyectos, usa el prompt 02, que hace commits reales. Si no sabes qué es un commit o no quieres arriesgarte a tocar Git, usa el prompt 03, el SAFE, que nunca toca Git.</p>
-            </div>
-          </div>
-
-          <div class="acc-item">
-            <button class="acc-trigger" aria-expanded="false">
-              <span>¿Instalar Graphify rompe mi Python?</span>
-              <span class="acc-icon" aria-hidden="true"></span>
-            </button>
-            <div class="acc-panel">
-              <p>No. Se instala con <code>uv tool install</code>, que crea un entorno aislado propio para el paquete. Nunca toca tu Python global ni las librerías de otros proyectos.</p>
-            </div>
-          </div>
-
-          <div class="acc-item">
-            <button class="acc-trigger" aria-expanded="false">
-              <span>¿El paquete se llama "Graphify" o "graphifyy"?</span>
-              <span class="acc-icon" aria-hidden="true"></span>
-            </button>
-            <div class="acc-panel">
-              <p>La herramienta es Graphify, con una sola "y". El paquete real en PyPI se llama <code>graphifyy</code>, con doble "y", porque el nombre corto ya estaba tomado. Usa ese nombre exacto en el comando de instalación.</p>
-            </div>
-          </div>
-
-          <div class="acc-item">
-            <button class="acc-trigger" aria-expanded="false">
-              <span>¿Es cierto que CLAUDE.md no consume tokens?</span>
-              <span class="acc-icon" aria-hidden="true"></span>
-            </button>
-            <div class="acc-panel">
-              <p>No. Sí entra al contexto como cualquier texto de sistema. Lo real es que se carga solo, sin invocarlo, y con el caché de prompt su costo entre mensajes de la misma sesión es casi insignificante.</p>
-            </div>
-          </div>
+No agregues nada más al CLAUDE.md fuera de estas secciones.</pre></div>
         </div>
       </div>
-    </section>
-
-    <!-- ===== CTA FINAL ===== -->
-    <section class="cta-final" id="contacto">
-      <div class="dot-grid" aria-hidden="true"></div>
-      <div class="cta-bg-text" aria-hidden="true">CORONA</div>
-      <div class="wrap cta-wrap">
-        <p class="eyebrow">¿Y si vamos más allá del setup?</p>
-        <h2>¿QUIERES CORONAR TU NEGOCIO?</h2>
-        <p class="cta-italic"><em>Llevémoslo al siguiente nivel</em></p>
-        <p class="sec-lede">Agenda una reunión de 15 minutos y hablamos de tu proyecto.</p>
-        <a class="btn btn-primary btn-lg" href="https://calendly.com/stefanocoronado24/15" target="_blank" rel="noopener">Quiero coronar mi negocio</a>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ===== FOOTER ===== -->
-  <footer class="footer">
-    <div class="wrap footer-inner">
-      <span>Crowned Studio © 2026 · Recursos del canal de YouTube</span>
     </div>
-  </footer>
+  </div>
+</section>
 
-  <script src="script.js"></script>
+<section id="usar">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Después de instalar, <em>úsalo así</em></h2><p>Toca para copiar cada comando.</p><div class="title-rule"></div></div>
+    <div class="cmds reveal">
+      <button type="button" class="cmd" data-cmd='graphify query "¿dónde se maneja el login?"'><code>graphify query "…"</code><span>Pregunta al grafo en vez de leer archivos</span></button>
+      <button type="button" class="cmd" data-cmd="/surgeon"><code>/surgeon</code><span>Activa el protocolo de output directo</span></button>
+      <button type="button" class="cmd" data-cmd="/save"><code>/save</code><span>Guarda la sesión y actualiza el grafo</span></button>
+      <button type="button" class="cmd" data-cmd="/cierre"><code>/cierre</code><span>Registro de sesión y handoff</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Antes de correr los prompts</h2><div class="title-rule"></div></div>
+    <div class="faq reveal">
+      <details><summary>¿Cuál de los dos prompts de CLAUDE.md uso?</summary><p>Si ya usas Git, el 02, que hace commits reales. Si no sabes qué es un commit o no quieres arriesgarte a tocar Git, el 03 (SAFE), que nunca toca Git.</p></details>
+      <details><summary>¿Instalar Graphify rompe mi Python?</summary><p>No. Se instala con <code>uv tool install</code>, que crea un entorno aislado para el paquete. Nunca toca tu Python global ni las librerías de otros proyectos.</p></details>
+      <details><summary>¿El paquete se llama «Graphify» o «graphifyy»?</summary><p>La herramienta es Graphify, con una sola «y». El paquete en PyPI se llama <code>graphifyy</code>, con doble «y», porque el nombre corto ya estaba tomado. Usa ese nombre exacto al instalar.</p></details>
+      <details><summary>¿Es cierto que CLAUDE.md no consume tokens?</summary><p>No. Sí entra al contexto como cualquier texto de sistema. Lo real es que se carga solo, sin invocarlo, y con el caché de prompt su costo entre mensajes de la misma sesión es casi insignificante.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta-final" id="contacto">
+  <div class="dot-grid"></div>
+  <div class="wrap">
+    <span class="eyebrow">¿Y si vamos más allá del setup?</span>
+    <h2>Llevemos tu proyecto <em>al siguiente nivel</em></h2>
+    <p class="lede" style="margin:0 auto 24px">Agenda una reunión de 15 minutos y hablamos de tu proyecto.</p>
+    <a class="btn btn-primary btn-lg" href="https://calendly.com/stefanocoronado24/15" target="_blank" rel="noopener">Quiero coronar mi negocio</a>
+  </div>
+</section>
+</main>
+<footer class="footer"><div class="wrap">Crowned Studio · <a href="https://instagram.com/stefano.coronadoo" target="_blank" rel="noopener">@stefano.coronadoo</a> · Recursos del canal de YouTube · fuentes Bricolage Grotesque, Hanken Grotesk y JetBrains Mono (OFL)</div></footer>
+<script src="script.js"></script>
 </body>
 </html>
