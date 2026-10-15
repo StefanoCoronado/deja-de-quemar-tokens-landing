@@ -152,3 +152,14 @@ details>summary:hover::before{opacity:1;text-decoration:underline}
 @keyframes csShine{0%{opacity:1;transform:translateX(0) skewX(-20deg)}45%,100%{opacity:1;transform:translateX(420%) skewX(-20deg)}}
 @media(prefers-reduced-motion:reduce){.cta-imm.pre .cs .it{opacity:1}.cta-imm.go .cs .it,.cta-imm.go .cs .b-t,.cta-imm.go .btn-primary::after,.cs .b-t i{animation:none!important}.cs .b-t{display:none}.cs .ln::after,.cs .bar i{transform:none}}
 @media(max-width:560px){.cta-imm{padding:72px 0 90px}.cta-imm .cta-row .btn{width:100%}.cs .fl{gap:5px}.cs .n{padding:6px 8px;font-size:.64rem}}
+
+/* CTA escritorio: escena a la izquierda, texto a la derecha */
+@media(min-width:900px){
+  .cta-imm{text-align:left}
+  .cta-imm .wrap{grid-template-columns:minmax(0,440px) minmax(0,1fr);column-gap:64px;row-gap:16px;justify-items:start;align-content:center;max-width:1100px}
+  .cta-imm .cs{grid-column:1;grid-row:1/span 4;align-self:center;justify-self:center;width:100%}
+  .cta-imm .eyebrow,.cta-imm h2,.cta-imm .lede,.cta-imm .cta-row{grid-column:2;text-align:left}
+  .cta-imm .eyebrow{align-self:end}
+  .cta-imm .cta-row{justify-content:flex-start}
+  .cta-imm h2{max-width:16ch}
+}
