@@ -57,3 +57,12 @@ if(matchMedia('(hover:hover) and (pointer:fine)').matches&&!calm){
 
 /* acordeón: un desplegable abierto a la vez por grupo */
 document.querySelectorAll("details").forEach(d=>d.addEventListener("toggle",()=>{if(d.open&&d.parentElement)d.parentElement.querySelectorAll(":scope>details[open]").forEach(o=>{if(o!==d)o.open=false})}));
+
+/* CTA animado: entra al hacer scroll */
+(()=>{const c=document.querySelector('.cta-imm');if(!c)return;
+  const split=n=>{[...n.childNodes].forEach(x=>{if(x.nodeType===3){const f=document.createDocumentFragment();x.textContent.split(/(\s+)/).forEach(t=>{if(!t)return;if(/^\s+$/.test(t)){f.append(t);return}const s=document.createElement('span');s.className='w';s.textContent=t;f.append(s)});x.replaceWith(f)}else if(x.nodeType===1)split(x)})};
+  const h=c.querySelector('h2');if(h){split(h);[...h.querySelectorAll('.w')].forEach((w,i)=>w.style.setProperty('--i',i))}
+  [...c.querySelector('.wrap').children].forEach((e,i)=>e.style.setProperty('--k',i));
+  if(!('IntersectionObserver'in window))return;c.classList.add('pre');
+  new IntersectionObserver((e,o)=>{if(e[0].isIntersecting){c.classList.remove('pre');c.classList.add('go');o.disconnect()}},{threshold:.25}).observe(c);
+})();

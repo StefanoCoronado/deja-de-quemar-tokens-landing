@@ -121,3 +121,25 @@ details>summary:hover::before{opacity:1;text-decoration:underline}
 @keyframes ctaPulse{70%{box-shadow:0 0 0 18px rgba(107,92,231,0)}100%{box-shadow:0 0 0 0 rgba(107,92,231,0)}}
 @media(prefers-reduced-motion:reduce){.cta-imm .cta-crown,.cta-imm .btn-primary{animation:none}}
 @media(max-width:560px){.cta-imm{padding:84px 0 100px}.cta-imm .cta-row .btn{width:100%}}
+
+/* CTA animado */
+.cta-imm::before{content:"";position:absolute;inset:-30%;background:conic-gradient(from 0deg at 50% 50%,rgba(107,92,231,.0),rgba(107,92,231,.22),rgba(239,159,39,.10),rgba(107,92,231,.0) 60%);filter:blur(60px);animation:ctaAurora 20s linear infinite;pointer-events:none}
+.cta-imm .cta-bg-text{animation:ctaDrift 7s ease-in-out infinite alternate}
+.cta-imm .cta-crown::after{content:"";position:absolute;inset:-26px;border-radius:50%;border:1px dashed rgba(167,155,255,.35);background:radial-gradient(circle 4px at 50% 0,var(--accent-light),transparent 5px);animation:ctaSpin 9s linear infinite}
+.cta-imm .btn-primary{position:relative;overflow:hidden}
+.cta-imm .btn-primary::after{content:"";position:absolute;top:0;bottom:0;width:40%;left:-60%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.45),transparent);transform:skewX(-20deg);animation:ctaShine 3.4s ease-in-out infinite}
+.cta-imm .btn-ghost{transition:transform .2s,border-color .2s}.cta-imm .btn-ghost:hover{transform:translateY(-3px);border-color:var(--accent-light)}
+.cta-imm.pre .wrap>*{opacity:0}
+.cta-imm.go .wrap>*{animation:ctaUp .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(var(--k,0)*.14s)}
+.cta-imm.pre h2 .w{opacity:0}
+.cta-imm.go h2 .w{display:inline-block;animation:ctaWord .8s cubic-bezier(.2,.8,.2,1) both;animation-delay:calc(.25s + var(--i)*55ms)}
+.cta-imm h2 .w{display:inline-block}
+@keyframes ctaAurora{to{transform:rotate(360deg)}}
+@keyframes ctaDrift{from{transform:translateY(0) scale(1);-webkit-text-stroke-color:rgba(107,92,231,.16)}to{transform:translateY(-.06em) scale(1.03);-webkit-text-stroke-color:rgba(167,155,255,.5)}}
+@keyframes ctaSpin{to{transform:rotate(360deg)}}
+@keyframes ctaShine{0%{left:-60%}55%,100%{left:130%}}
+@keyframes ctaUp{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:none}}
+@keyframes ctaWord{from{opacity:0;transform:translateY(.55em) rotateX(45deg);filter:blur(8px)}to{opacity:1;transform:none;filter:none}}
+@media(prefers-reduced-motion:reduce){.cta-imm::before,.cta-imm .cta-bg-text,.cta-imm .cta-crown::after,.cta-imm .btn-primary::after{animation:none}.cta-imm.pre .wrap>*,.cta-imm.pre h2 .w{opacity:1}.cta-imm.go .wrap>*,.cta-imm.go h2 .w{animation:none}}
+
+.cta-imm .eyebrow{text-align:center;border-radius:18px}
