@@ -288,5 +288,5 @@ body::before{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;ba
   radial-gradient(40% 40% at 100% 90%,rgba(239,159,39,.10),transparent 70%),
   radial-gradient(rgba(155,143,255,.16) 1px,transparent 1.4px) 0 0/26px 26px}
 @media(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference){
-  body::after{content:'';position:fixed;inset:0;z-index:-1;pointer-events:none;background-image:radial-gradient(circle at center,#C9C2FF 1.2px,transparent 1.8px);background-size:26px 26px;-webkit-mask-image:radial-gradient(circle 190px at var(--mx,-400px) var(--my,-400px),#000,transparent);mask-image:radial-gradient(circle 190px at var(--mx,-400px) var(--my,-400px),#000,transparent)}
+  body::after{content:'';position:fixed;left:0;top:0;width:380px;height:380px;z-index:-1;pointer-events:none;transform:translate3d(calc(var(--mx,-600px) - 190px),calc(var(--my,-600px) - 190px),0);will-change:transform;background-image:radial-gradient(circle at center,#C9C2FF 1.2px,transparent 1.8px);background-size:26px 26px;background-position:calc(190px - var(--mx,-600px)) calc(190px - var(--my,-600px));-webkit-mask-image:radial-gradient(circle 190px at 190px 190px,#000,transparent);mask-image:radial-gradient(circle 190px at 190px 190px,#000,transparent)}
 }
