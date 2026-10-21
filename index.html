@@ -25,7 +25,7 @@
 <a class="skip-link" href="#main">Saltar al contenido</a>
 <header class="topbar"><div class="wrap topbar-inner">
   <a href="#top" class="brand" aria-label="Crowned Studio: inicio"><img src="assets/crowned-logo-88.png" alt="" width="34" height="34"><span>Crowned Studio</span></a>
-  <nav class="nav" aria-label="Secciones"><a href="#que-hace">Qué hace</a><a href="#prompts">Prompts</a><a href="#usar">Cómo se usa</a><a href="#faq">Dudas</a></nav>
+  <nav class="nav" aria-label="Secciones"><a href="#medicion">Medición</a><a href="#requisitos">Requisitos</a><a href="#prompts">Prompts</a><a href="#usar">Cómo se usa</a><a href="#faq">Dudas</a></nav>
   <a class="btn btn-ghost btn-sm" href="https://instagram.com/stefanocoronadoo" target="_blank" rel="noopener">Contáctame</a>
 </div></header>
 
@@ -37,7 +37,7 @@
     <div>
       <span class="eyebrow">Recursos del video</span>
       <h1>Deja de quemar <em>tokens</em></h1>
-      <p class="lede">Claude Code no tiene que leer todo tu proyecto cada vez. Con Graphify consulta un mapa. Aquí están los 3 prompts del video, listos para copiar.</p>
+      <p class="lede">Claude Code no tiene que leer todo tu proyecto cada vez. Con Graphify consulta un mapa: en mi prueba, una pregunta pasó de ≈21.300 a ≈1.400 tokens. Aquí están los 3 prompts del video, listos para copiar.</p>
       <div class="hero-cta"><a class="btn btn-primary btn-lg" href="#prompts">Copiar los prompts</a><a class="btn btn-ghost btn-lg" href="#que-hace">Qué es Graphify</a></div>
     </div>
     <div class="ctx" data-ctx data-m="sin" role="group" aria-label="Ilustración: cómo Claude Code busca en tu proyecto con y sin Graphify">
@@ -60,6 +60,46 @@
   <div class="wrap">
     <div class="sec-head reveal"><h2>Cada sesión empieza <em>de cero</em></h2><p>Sin un mapa, Claude Code lee archivo por archivo para entender tu proyecto. Eso gasta tokens y tiempo en cada pregunta.</p><div class="title-rule"></div></div>
     <figure class="gfig reveal"><img src="assets/graphify-graph.jpg" alt="Grafo de conocimiento generado por Graphify sobre un proyecto real, con nodos y comunidades de archivos relacionados" width="480" loading="lazy"><figcaption>Grafo real de Graphify sobre uno de nuestros proyectos. Los nodos son archivos y las conexiones son relaciones reales entre ellos.</figcaption></figure>
+  </div>
+</section>
+
+<section id="medicion">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Lo que <em>medí</em></h2><p>Una pregunta real a mi proyecto de video: «¿dónde se dibuja el medidor y quién lo usa?».</p><div class="title-rule"></div></div>
+    <div class="lim reveal">
+      <div class="lim-card"><b class="kpi-n bad">≈21.300</b><p>tokens sin grafo: Claude lee el archivo entero (85.018 caracteres).</p></div>
+      <div class="lim-card"><b class="kpi-n ok">≈1.400</b><p>tokens con grafo: la consulta y un fragmento de 46 líneas.</p></div>
+      <div class="lim-card"><b class="kpi-n ok">−93 %</b><p>en esa pregunta. No es un promedio.</p></div>
+    </div>
+    <p class="note reveal">Mi medición del 21/10/2026 con Graphify v0.9.74 en Windows; tokens estimados como caracteres ÷ 4. No siempre acierta: en otra pregunta el grafo no encontró el concepto y tuve que buscar igual. El ahorro depende de tu proyecto y de la pregunta. El README de Graphify no publica una cifra de ahorro.</p>
+  </div>
+</section>
+
+<section id="requisitos">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>Qué necesitas y <em>límite real</em></h2><div class="title-rule"></div></div>
+    <div class="lim reveal">
+      <div class="lim-card"><b>Claude Code</b><p>Con plan Pro, Max o API de pago, en Windows, macOS o Linux. En el chat de claude.ai no aplica: ahí no hay carpeta de proyecto.</p></div>
+      <div class="lim-card"><b>Python vía uv</b><p>El prompt 01 instala <code>uv</code> con el comando de Windows. En macOS o Linux usa <code>curl -LsSf https://astral.sh/uv/install.sh | sh</code> y luego el prompt.</p></div>
+      <div class="lim-card"><b>Qué gasta tokens</b><p><code>graphify update .</code> lee solo código y es gratis. La pasada con documentos (<code>/graphify .</code>) corre dentro de Claude Code y gasta de tu plan.</p></div>
+    </div>
+    <div class="sec-head reveal" style="margin:40px 0 20px"><h3>Instalación manual, sin prompt</h3><p>Toca para copiar, en este orden.</p></div>
+    <div class="cmds reveal">
+      <button type="button" class="cmd" data-cmd="uv tool install graphifyy"><code>uv tool install graphifyy</code><span>1. Instala el paquete (doble «y»)</span></button>
+      <button type="button" class="cmd" data-cmd="graphify install"><code>graphify install</code><span>2. Lo conecta a Claude Code</span></button>
+      <button type="button" class="cmd" data-cmd="graphify update ."><code>graphify update .</code><span>3. Arma el grafo del código, gratis</span></button>
+      <button type="button" class="cmd" data-cmd='graphify query "¿dónde se maneja el login?" --budget 800'><code>graphify query "…" --budget 800</code><span>4. Pregunta al grafo con tope de 800 tokens</span></button>
+    </div>
+  </div>
+</section>
+
+<section id="casos">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>2 casos de <em>uso</em></h2><div class="title-rule"></div></div>
+    <div class="lim reveal casos2">
+      <div class="lim-card"><b>Web de una inmobiliaria en Manta</b><p>Preguntas «¿dónde se calcula la cuota del crédito?». Sin grafo, Claude abre fichas, filtros y estilos hasta dar con ella. Con grafo, <code>graphify query</code> le señala el archivo y abre solo ese.</p></div>
+      <div class="lim-card"><b>Varios proyectos de clientes</b><p>Vuelves a un proyecto después de un mes. <code>graphify path "formulario" "correo"</code> te muestra qué archivos conectan el formulario con el envío del correo, sin releer todo.</p></div>
+    </div>
   </div>
 </section>
 
@@ -323,13 +363,18 @@ No agregues nada más al CLAUDE.md fuera de estas secciones.</pre></div>
 
 <section id="faq">
   <div class="wrap">
-    <div class="sec-head reveal"><h2>Antes de correr los prompts</h2><div class="title-rule"></div></div>
+    <div class="sec-head reveal"><h2>Dudas y errores comunes</h2><div class="title-rule"></div></div>
     <div class="faq reveal">
       <details><summary>¿Cuál de los dos prompts de CLAUDE.md uso?</summary><p>Si ya usas Git, el 02, que hace commits reales. Si no sabes qué es un commit o no quieres arriesgarte a tocar Git, el 03 (SAFE), que nunca toca Git.</p></details>
       <details><summary>¿Instalar Graphify rompe mi Python?</summary><p>No. Se instala con <code>uv tool install</code>, que crea un entorno aislado para el paquete. Nunca toca tu Python global ni las librerías de otros proyectos.</p></details>
-      <details><summary>¿El paquete se llama «Graphify» o «graphifyy»?</summary><p>La herramienta es Graphify, con una sola «y». El paquete en PyPI se llama <code>graphifyy</code>, con doble «y», porque el nombre corto ya estaba tomado. Usa ese nombre exacto al instalar.</p></details>
+      <details><summary>¿El paquete se llama «Graphify» o «graphifyy»?</summary><p>La herramienta es Graphify, con una sola «y». El paquete en PyPI se llama <code>graphifyy</code>, con doble «y». Usa ese nombre exacto al instalar.</p></details>
       <details><summary>¿Es cierto que CLAUDE.md no consume tokens?</summary><p>No. Sí entra al contexto como cualquier texto de sistema. Lo real es que se carga solo, sin invocarlo, y con el caché de prompt su costo entre mensajes de la misma sesión es casi insignificante.</p></details>
+      <details><summary>Error: «graphify» no se reconoce como comando</summary><p>La terminal todavía no ve la carpeta de herramientas de uv. Corre <code>uv tool update-shell</code>, cierra la terminal y abre una nueva.</p></details>
+      <details><summary>La consulta no encuentra lo que busco</summary><p>Pregunta con los nombres que usa tu código (archivo, función, componente) en vez de palabras generales. Si cambiaste archivos desde la última vez, corre <code>graphify update .</code> antes. Si aun así no aparece, que Claude busque de la forma normal: el grafo no lo sabe todo.</p></details>
+      <details><summary>El comando find no funciona en Windows</summary><p><code>find</code> es de macOS y Linux. En Windows córrelo desde Git Bash o compara a mano la fecha de tus archivos con la de <code>graphify-out/graph.json</code>.</p></details>
+      <details><summary>Dice TRUNCATED al final de la respuesta</summary><p>La respuesta pasó el tope de <code>--budget</code>. Súbelo solo si falta la parte que necesitas, por ejemplo a 1500.</p></details>
     </div>
+    <p class="note reveal">Fuente: <a href="https://github.com/Graphify-Labs/graphify" target="_blank" rel="noopener">github.com/Graphify-Labs/graphify</a>, licencia Apache-2.0, versión 0.9.74 (verificado el 21/10/2026). Proyecto de terceros, no de Crowned Studio ni de Anthropic. El ahorro que ves arriba es mi medición, no una cifra del proyecto.</p>
   </div>
 </section>
 
