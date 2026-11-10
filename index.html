@@ -25,7 +25,7 @@
 <a class="skip-link" href="#main">Saltar al contenido</a>
 <header class="topbar"><div class="wrap topbar-inner">
   <a href="#top" class="brand" aria-label="Crowned Studio: inicio"><img src="assets/crowned-logo-88.png" alt="" width="34" height="34"><span>Crowned Studio</span></a>
-  <nav class="nav" aria-label="Secciones"><a href="#medicion">Medición</a><a href="#requisitos">Requisitos</a><a href="#prompts">Prompts</a><a href="#usar">Cómo se usa</a><a href="#faq">Dudas</a></nav>
+  <nav class="nav" aria-label="Secciones"><a href="#medicion">Medición</a><a href="#requisitos">Requisitos</a><a href="#prompts">Prompts</a><a href="#usar">Cómo se usa</a><a href="#ajustes">Ajustes</a><a href="#faq">Dudas</a></nav>
   <a class="btn btn-ghost btn-sm" href="https://instagram.com/stefanocoronadoo" target="_blank" rel="noopener">Contáctame</a>
 </div></header>
 
@@ -358,6 +358,25 @@ No agregues nada más al CLAUDE.md fuera de estas secciones.</pre></div>
       <button type="button" class="cmd" data-cmd="/save"><code>/save</code><span>Guarda la sesión y actualiza el grafo</span></button>
       <button type="button" class="cmd" data-cmd="/cierre"><code>/cierre</code><span>Registro de sesión y handoff</span></button>
     </div>
+  </div>
+</section>
+
+<section id="ajustes">
+  <div class="wrap">
+    <div class="sec-head reveal"><h2>4 ajustes que casi <em>nadie toca</em></h2><p>Vienen con Claude Code. No instalan nada y se cambian en un minuto.</p><div class="title-rule"></div></div>
+    <div class="lim reveal casos2">
+      <div class="lim-card"><b>1. Lee el changelog</b><p>Es la lista de lo que cambia en cada versión, como las notas de un parche de videojuego. Ahí aparecen los ajustes nuevos antes que en cualquier video. Una vez por semana basta: <a href="https://code.claude.com/docs/en/changelog" target="_blank" rel="noopener">code.claude.com/docs/en/changelog</a>.</p></div>
+      <div class="lim-card"><b>2. Estilo de respuesta: Conciso</b><p>Hay cinco estilos: el normal, Proactivo, Conciso, Explicativo y Aprendizaje. Los dos últimos escriben más, porque explican o te hacen practicar. Conciso va directo al resultado. Cámbialo con <code>/output-style concise</code> y vuelve al normal cuando quieras con <code>/output-style</code>.</p></div>
+      <div class="lim-card"><b>3. Autocompactar a 200 mil tokens</b><p>Cuando la conversación se llena, Claude la resume para seguir. Con este ajuste la resume antes, como limpiar la mesa antes de que no quepa nada. Se cambia con <code>/autocompact 200k</code>; <code>/autocompact auto</code> lo devuelve al valor de tu modelo. El valor queda guardado en tus ajustes.</p></div>
+      <div class="lim-card"><b>4. Cuida la caché</b><p>La caché es la memoria corta de Claude: lo que ya leyó no se cobra completo otra vez. En un plan de suscripción dura una hora. Si vuelves antes, no relee todo. Cambiar de modelo a mitad de la charla la borra, así que elige uno y quédate.</p></div>
+    </div>
+    <div class="cmds reveal" style="margin-top:20px">
+      <button type="button" class="cmd" data-cmd="/output-style concise"><code>/output-style concise</code><span>Respuestas directas al resultado</span></button>
+      <button type="button" class="cmd" data-cmd="/autocompact 200k"><code>/autocompact 200k</code><span>Resume la charla al llegar a 200 mil</span></button>
+      <button type="button" class="cmd" data-cmd="/context"><code>/context</code><span>Mira cuánto llevas ocupado</span></button>
+      <button type="button" class="cmd" data-cmd="/compact"><code>/compact</code><span>Resume ahora, sin esperar</span></button>
+    </div>
+    <p class="note reveal">No doy una cifra de ahorro para estos ajustes: la documentación no publica ninguna y depende de cómo trabajes. Comandos y valores verificados el 09/11/2026 en la documentación oficial (<a href="https://code.claude.com/docs/en/output-styles" target="_blank" rel="noopener">estilos</a>, <a href="https://code.claude.com/docs/en/prompt-caching" target="_blank" rel="noopener">caché</a>). Si tu versión no reconoce un comando, actualiza Claude Code y revisa el changelog.</p>
   </div>
 </section>
 
